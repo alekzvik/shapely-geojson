@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/alekzvik/shapely-geojson.svg?branch=master)](https://travis-ci.org/alekzvik/shapely-geojson)
+[![Coverage Status](https://coveralls.io/repos/github/alekzvik/shapely-geojson/badge.svg)](https://coveralls.io/github/alekzvik/shapely-geojson)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+[![PyPI](https://img.shields.io/pypi/pyversions/Django.svg)]()
 # shapely-geojson
 Feature and FeatureCollection to work nice with Shapely geometry structures and GeoJson.
 
