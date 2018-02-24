@@ -9,6 +9,9 @@ Feature and FeatureCollection to work nice with Shapely geometry structures and 
 * Feature & FeatureCollection classes as in [GeoJson spec](http://geojson.org/).
 * dump & dumps functions as in json, to serialize your shapely geometries.
 
+## Why?
+I use shapely all the time and recently more frequently I use GeoJSON to show my data on maps. Main thing I was missing is fast way to create features and dump them to geojson.
+
 ## Examples
 Feature
 ```python
@@ -75,9 +78,6 @@ FeatureCollection
 }
 
 ```
-
-## Why?
-I use shapely all the time and recently more frequently I use GeoJSON to show my data on maps. Main thing I was missing is fast way to create features and dump them on a geojson.
 
 ## Existing alternatives
 You should also consider alternatives:
