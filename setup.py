@@ -22,7 +22,7 @@ tests_require = [
 
 setup(
     name='shapely-geojson',
-    version='0.0.1',
+    version='0.0.2',
     author='Alex Vykaliuk',
     author_email='alekzvik@gmail.com',
     py_modules=['shapely_geojson'],
