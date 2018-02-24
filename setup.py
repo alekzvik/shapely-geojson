@@ -8,6 +8,16 @@ here = path.abspath(path.dirname(__file__))
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
+
+install_requires = [
+    'Shapely',
+]
+tests_require = [
+    'pytest',
+    'pytest-cov',
+    'python-coveralls',
+]
+
 setup(
     name='shapely-geojson',
     version='0.0.1',
@@ -18,12 +28,11 @@ setup(
     license='LICENSE',
     description='Feature and FeatureCollection for Shapely.',
     long_description=open('README.md').read(),
-    install_requires=[
-        'Shapely',
-    ],
-    tests_require=[
-        'pytest',
-    ],
+    install_requires=install_requires,
+    extras_require={
+        'tests': tests_require,
+    },
+    tests_require=tests_require,
     classifiers=[
         # How mature is this project? Common values are
         #   3 - Alpha
@@ -40,8 +49,6 @@ setup(
 
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate whether you support Python 2, Python 3 or both.
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
