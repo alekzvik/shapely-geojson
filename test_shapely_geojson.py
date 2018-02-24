@@ -10,16 +10,19 @@ from shapely_geojson import dump, dumps, Feature, FeatureCollection
 def test_dump():
     fp = io.StringIO()
     point = Point(1, 1)
-    geojson = '{\n "type": "Point",\n "coordinates": [\n  1.0,\n  1.0\n ]\n}'
+    geojson1 = '{\n "type": "Point",\n "coordinates": [\n  1.0,\n  1.0\n ]\n}'
+    geojson2 = '{\n "coordinates": [\n  1.0,\n  1.0\n ],\n "type": "Point"\n}'
     with fp:
         dump(point, fp, indent=1)
-        assert fp.getvalue() == geojson
+        assert fp.getvalue() == geojson1 or fp.getvalue() == geojson2
 
 
 def test_dumps():
     point = Point(1, 1)
-    geojson = '{\n "type": "Point",\n "coordinates": [\n  1.0,\n  1.0\n ]\n}'
-    assert dumps(point, indent=1) == geojson
+    geojson1 = '{\n "type": "Point",\n "coordinates": [\n  1.0,\n  1.0\n ]\n}'
+    geojson2 = '{\n "coordinates": [\n  1.0,\n  1.0\n ],\n "type": "Point"\n}'
+    dumped = dumps(point, indent=1)
+    assert dumped == geojson1 or dumped == geojson2
 
 
 class TestFeature():
