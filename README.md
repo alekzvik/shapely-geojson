@@ -7,7 +7,7 @@ Feature and FeatureCollection to work nice with Shapely geometry structures and 
 
 ## Examples
 Feature
-```
+```python
 >>> from shapely.geometry import Point
 >>> from shapely_geojson import dumps, Feature
 >>> feature = Feature(Point(1, 2), properties={'key': 'value'})
@@ -27,7 +27,7 @@ Feature
 }
 ```
 FeatureCollection
-```
+```python
 >>> feature1 = Feature(Point(1, 2), {'index': 1})
 >>> feature2 = Feature(Point(3, 4), {'index': 2})
 >>> features = [feature1, feature2]

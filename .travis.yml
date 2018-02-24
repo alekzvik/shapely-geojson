@@ -6,6 +6,6 @@ python:
   - "3.6"
   - "3.6-dev" # 3.6 development branch
 install: "pip install .[tests]"
-script: pytest
+script: pytest --cov
 after_success:
   - coveralls
