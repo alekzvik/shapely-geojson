@@ -1,13 +1,15 @@
-from codecs import open
 from os import path
 from setuptools import setup
 
 here = path.abspath(path.dirname(__file__))
 
-# Get the long description from the README file
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
-
+description = '''
+- Feature & FeatureCollection classes as in GeoJson
+spec
+- dump & dumps functions as in json, to serialize your shapely
+geometries.
+See github for more details.
+'''
 
 install_requires = [
     'Shapely',
@@ -24,10 +26,10 @@ setup(
     author='Alex Vykaliuk',
     author_email='alekzvik@gmail.com',
     py_modules=['shapely_geojson'],
-    url='https://github.com/alekzvik/shapely_geojson/',
+    url='https://github.com/alekzvik/shapely-geojson/',
     license='LICENSE',
     description='Feature and FeatureCollection for Shapely.',
-    long_description=open('README.md').read(),
+    long_description=description,
     install_requires=install_requires,
     extras_require={
         'tests': tests_require,
